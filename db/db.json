@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Administrador",
+      "login": "admin",
+      "email": "admin@explorebrasil.com",
+      "senha": "123456",
+      "admin": true,
+      "favoritos": []
+    }
+  ],
+  "lugares": []
+}
