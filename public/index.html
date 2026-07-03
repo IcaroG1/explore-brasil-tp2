@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Brasil</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- NAVBAR -->
+    <!-- ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                🌎 Explore Brasil
+            </a>
+
+            <!-- Botão Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto" id="menuUsuario">
+
+                    <!-- O JavaScript irá preencher automaticamente -->
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ===================================================== -->
+    <!-- BANNER -->
+    <!-- ===================================================== -->
+
+    <header class="bg-light p-5 text-center">
+
+        <h1 class="display-4 fw-bold">
+            Explore os melhores destinos do Brasil
+        </h1>
+
+        <p class="lead">
+            Descubra praias, cidades históricas, cachoeiras,
+            parques nacionais e muito mais.
+        </p>
+
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- CARROSSEL -->
+    <!-- ===================================================== -->
+
+    <section class="container mt-5">
+
+        <h2 class="mb-4">
+            Destaques
+        </h2>
+
+        <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Slides criados pelo JavaScript -->
+            <div class="carousel-inner" id="carouselConteudo">
+
+            </div>
+
+            <!-- Botão Anterior -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <!-- Botão Próximo -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PESQUISA -->
+    <!-- ===================================================== -->
+
+    <section class="container mt-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-8">
+
+                <h2>Todos os destinos</h2>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <input type="text" id="pesquisa" class="form-control" placeholder="Pesquisar destino...">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- LISTA DE CARDS -->
+    <!-- ===================================================== -->
+
+    <section class="container mt-4">
+
+        <div class="row g-4" id="listaLugares">
+
+            <!--
+                Os cards serão inseridos pelo JavaScript
+            -->
+
+        </div>
+
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ÁREA PARA MAPA OU GRÁFICO -->
+    <!-- ===================================================== -->
+
+    <section class="container mt-5">
+
+        <!-- ===================================================== -->
+        <!-- GRÁFICO -->
+        <!-- ===================================================== -->
+
+        <section class="container mt-5">
+
+            <h2 class="mb-4 text-success">
+                Visualização de Dados
+            </h2>
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <canvas id="graficoCategorias" height="120"></canvas>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- SOBRE O AUTOR -->
+        <!-- ===================================================== -->
+
+        <section class="container mt-5">
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-md-3 text-center">
+
+                            <img src="assets/img/avatar.jpg" class="img-fluid rounded-circle" width="170" alt="Autor">
+
+                        </div>
+
+                        <div class="col-md-9">
+
+                            <h3>
+                                Sobre o Autor
+                            </h3>
+
+                            <p>
+
+                                Nome: Ícaro
+
+                            </p>
+
+                            <p>
+
+                                Curso: Análise e Desenvolvimento de Sistemas
+
+                            </p>
+
+                            <p>
+
+                                Projeto desenvolvido para a disciplina
+                                de Desenvolvimento Web.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- RODAPÉ -->
+        <!-- ===================================================== -->
+
+        <footer class="bg-success text-white mt-5">
+
+            <div class="container text-center p-4">
+
+                <h5>
+                    Explore Brasil
+                </h5>
+
+                <p>
+
+                    Trabalho Prático 2
+
+                </p>
+
+                <p>
+
+                    © 2026 - Todos os direitos reservados.
+
+                </p>
+
+            </div>
+
+        </footer>
+
+        <script src="assets/js/login.js"></script>
+
+        <script src="assets/js/navbar.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Gráfico -->
+        <script src="assets/js/grafico.js"></script>
+
+        <script src="assets/js/api.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

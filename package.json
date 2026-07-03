@@ -1,0 +1,24 @@
+{
+  "name": "explore-brasil-tp2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "json-server --watch db/db.json --static public --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IcaroG1/explore-brasil-tp2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IcaroG1/explore-brasil-tp2/issues"
+  },
+  "homepage": "https://github.com/IcaroG1/explore-brasil-tp2#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.15"
+  }
+}

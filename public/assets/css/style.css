@@ -1,0 +1,305 @@
+/* =======================================================
+   ESTILO GERAL
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333;
+}
+
+/* =======================================================
+   NAVBAR
+======================================================= */
+
+.navbar{
+
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+
+}
+
+.navbar-brand{
+
+    font-size:1.5rem;
+    font-weight:bold;
+
+}
+
+.nav-link{
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#ffe082 !important;
+
+}
+
+/* =======================================================
+   BANNER
+======================================================= */
+
+header{
+
+    background:linear-gradient(135deg,#198754,#2e8b57);
+    color:white;
+    padding:80px 20px;
+
+}
+
+header h1{
+
+    font-weight:bold;
+    margin-bottom:20px;
+
+}
+
+header p{
+
+    font-size:1.2rem;
+
+}
+
+/* =======================================================
+   TÍTULOS
+======================================================= */
+
+h2{
+
+    font-weight:bold;
+    color:#198754;
+
+}
+
+/* =======================================================
+   CARROSSEL
+======================================================= */
+
+.carousel{
+
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.carousel-item img{
+
+    height:500px;
+    object-fit:cover;
+
+}
+
+.carousel-caption{
+
+    background:rgba(0,0,0,.55);
+    border-radius:10px;
+    padding:15px;
+
+}
+
+/* =======================================================
+   PESQUISA
+======================================================= */
+
+#pesquisa{
+
+    border-radius:30px;
+    padding:12px 18px;
+
+}
+
+/* =======================================================
+   CARDS
+======================================================= */
+
+.card{
+
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 10px rgba(0,0,0,.12);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.card img{
+
+    height:220px;
+    object-fit:cover;
+
+}
+
+.card-title{
+
+    color:#198754;
+    font-weight:bold;
+
+}
+
+.card-text{
+
+    text-align:justify;
+
+}
+
+.card .btn{
+
+    border-radius:30px;
+
+}
+
+/* =======================================================
+   SOBRE O AUTOR
+======================================================= */
+
+.card-body img{
+
+    border:4px solid #198754;
+
+}
+
+/* =======================================================
+   ÁREA DO GRÁFICO
+======================================================= */
+
+#grafico{
+
+    min-height:350px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px dashed #198754;
+    background:white;
+
+}
+
+/* =======================================================
+   RODAPÉ
+======================================================= */
+
+footer{
+
+    margin-top:80px;
+
+}
+
+footer h5{
+
+    font-weight:bold;
+
+}
+
+footer p{
+
+    margin-bottom:5px;
+
+}
+
+/* =======================================================
+   BOTÕES
+======================================================= */
+
+.btn-success{
+
+    border-radius:30px;
+    padding:10px 20px;
+
+}
+
+/* =======================================================
+   RESPONSIVIDADE
+======================================================= */
+
+@media(max-width:992px){
+
+    header{
+
+        padding:60px 15px;
+
+    }
+
+    header h1{
+
+        font-size:2rem;
+
+    }
+
+    .carousel-item img{
+
+        height:350px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    header h1{
+
+        font-size:1.8rem;
+
+    }
+
+    header p{
+
+        font-size:1rem;
+
+    }
+
+    .carousel-item img{
+
+        height:250px;
+
+    }
+
+    #pesquisa{
+
+        margin-top:20px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    header{
+
+        padding:40px 10px;
+
+    }
+
+    header h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .carousel-item img{
+
+        height:200px;
+
+    }
+
+    .card img{
+
+        height:180px;
+
+    }
+
+}
