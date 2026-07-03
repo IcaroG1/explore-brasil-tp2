@@ -1,22 +1,16 @@
-/* ==========================================================
+/*==========================================================
     Explore Brasil
     login.js
-
-    Adaptado do LoginApp do professor
 
     Responsável por:
     ✔ Login
     ✔ Cadastro
     ✔ Logout
     ✔ Sessão
-    ✔ JSON Server
+    ✔ Verificação de administrador
 ==========================================================*/
 
-const API = "http://localhost:3000/usuarios";
-
-/*==========================================================
-    Usuário logado
-==========================================================*/
+const API_USUARIOS = "http://localhost:3000/usuarios";
 
 let usuarioCorrente = null;
 
@@ -35,7 +29,39 @@ window.addEventListener("load", () => {
 });
 
 /*==========================================================
-    Verifica se existe usuário logado
+    Configura formulário de login
+==========================================================*/
+
+function configurarFormularioLogin() {
+
+    const form = document.getElementById("formLogin");
+
+    if (form) {
+
+        form.addEventListener("submit", loginUser);
+
+    }
+
+}
+
+/*==========================================================
+    Configura formulário de cadastro
+==========================================================*/
+
+function configurarFormularioCadastro() {
+
+    const form = document.getElementById("formCadastro");
+
+    if (form) {
+
+        form.addEventListener("submit", cadastrarUsuario);
+
+    }
+
+}
+
+/*==========================================================
+    Recupera sessão
 ==========================================================*/
 
 function verificarSessao() {
@@ -47,34 +73,6 @@ function verificarSessao() {
         usuarioCorrente = JSON.parse(usuario);
 
     }
-
-}
-
-/*==========================================================
-    Configura formulário de Login
-==========================================================*/
-
-function configurarFormularioLogin() {
-
-    const form = document.getElementById("formLogin");
-
-    if (!form) return;
-
-    form.addEventListener("submit", loginUser);
-
-}
-
-/*==========================================================
-    Configura formulário de Cadastro
-==========================================================*/
-
-function configurarFormularioCadastro() {
-
-    const form = document.getElementById("formCadastro");
-
-    if (!form) return;
-
-    form.addEventListener("submit", cadastrarUsuario);
 
 }
 
@@ -92,15 +90,13 @@ async function loginUser(event) {
 
     try {
 
-        const resposta = await fetch(API);
+        const resposta = await fetch(API_USUARIOS);
 
         const usuarios = await resposta.json();
 
         const usuario = usuarios.find(u =>
-
             u.login === login &&
             u.senha === senha
-
         );
 
         if (!usuario) {
@@ -121,7 +117,7 @@ async function loginUser(event) {
 
         );
 
-        alert("Login realizado com sucesso!");
+        alert(`Bem-vindo(a), ${usuario.nome}!`);
 
         window.location.href = "index.html";
 
@@ -131,14 +127,14 @@ async function loginUser(event) {
 
         console.error(erro);
 
-        alert("Erro ao conectar ao servidor.");
+        alert("Erro ao conectar com o servidor.");
 
     }
 
 }
 
 /*==========================================================
-    CADASTRO
+    CADASTRAR USUÁRIO
 ==========================================================*/
 
 async function cadastrarUsuario(event) {
@@ -153,9 +149,23 @@ async function cadastrarUsuario(event) {
 
     const senha = document.getElementById("senha").value.trim();
 
+    const confirmarSenha = document.getElementById("confirmarSenha");
+
+    if (confirmarSenha) {
+
+        if (senha !== confirmarSenha.value.trim()) {
+
+            alert("As senhas não conferem.");
+
+            return;
+
+        }
+
+    }
+
     try {
 
-        const resposta = await fetch(API);
+        const resposta = await fetch(API_USUARIOS);
 
         const usuarios = await resposta.json();
 
@@ -169,7 +179,7 @@ async function cadastrarUsuario(event) {
 
         if (existe) {
 
-            alert("Usuário já cadastrado.");
+            alert("Já existe um usuário com este login ou e-mail.");
 
             return;
 
@@ -193,7 +203,7 @@ async function cadastrarUsuario(event) {
 
         };
 
-        await fetch(API, {
+        const cadastro = await fetch(API_USUARIOS, {
 
             method: "POST",
 
@@ -207,6 +217,12 @@ async function cadastrarUsuario(event) {
 
         });
 
+        if (!cadastro.ok) {
+
+            throw new Error("Erro ao cadastrar.");
+
+        }
+
         alert("Cadastro realizado com sucesso!");
 
         window.location.href = "login.html";
@@ -217,7 +233,7 @@ async function cadastrarUsuario(event) {
 
         console.error(erro);
 
-        alert("Erro ao cadastrar usuário.");
+        alert("Não foi possível cadastrar o usuário.");
 
     }
 
@@ -238,17 +254,7 @@ function logoutUser() {
 }
 
 /*==========================================================
-    Verifica Login
-==========================================================*/
-
-function usuarioEstaLogado() {
-
-    return sessionStorage.getItem("usuarioCorrente") != null;
-
-}
-
-/*==========================================================
-    Usuário Atual
+    Retorna usuário atual
 ==========================================================*/
 
 function getUsuarioCorrente() {
@@ -262,14 +268,28 @@ function getUsuarioCorrente() {
 }
 
 /*==========================================================
-    Verifica Administrador
+    Usuário logado?
+==========================================================*/
+
+function usuarioEstaLogado() {
+
+    return getUsuarioCorrente() !== null;
+
+}
+
+/*==========================================================
+    Administrador?
 ==========================================================*/
 
 function usuarioEhAdmin() {
 
     const usuario = getUsuarioCorrente();
 
-    if (!usuario) return false;
+    if (!usuario) {
+
+        return false;
+
+    }
 
     return usuario.admin === true;
 
@@ -283,7 +303,7 @@ function protegerPagina() {
 
     if (!usuarioEstaLogado()) {
 
-        alert("Faça login para acessar esta página.");
+        alert("Você precisa estar logado.");
 
         window.location.href = "login.html";
 
@@ -301,7 +321,7 @@ function protegerAdministrador() {
 
     if (!usuarioEhAdmin()) {
 
-        alert("Apenas administradores podem acessar esta página.");
+        alert("Acesso permitido apenas para administradores.");
 
         window.location.href = "index.html";
 

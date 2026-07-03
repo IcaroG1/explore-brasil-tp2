@@ -28,6 +28,7 @@
       "categoria": "Monumento",
       "descricao": "Um dos principais cartões-postais do Brasil e uma das sete maravilhas do mundo moderno.",
       "imagem": "assets/img/cristo.jpg",
+      "avaliacao": 4.8,
       "destaque": true
     },
     {
@@ -38,6 +39,7 @@
       "categoria": "Natureza",
       "descricao": "Complexo de centenas de quedas d'água localizado na fronteira entre Brasil e Argentina.",
       "imagem": "assets/img/cataratas.jpg",
+      "avaliacao": 4.9,
       "destaque": true
     },
     {
@@ -48,6 +50,7 @@
       "categoria": "Natureza",
       "descricao": "Parque Nacional famoso pelas dunas de areia branca e lagoas cristalinas.",
       "imagem": "assets/img/lencois.jpg",
+      "avaliacao": 4.7,
       "destaque": true
     },
     {
@@ -58,6 +61,7 @@
       "categoria": "História",
       "descricao": "Centro histórico de Salvador conhecido por sua arquitetura colonial.",
       "imagem": "assets/img/pelourinho.jpg",
+      "avaliacao": 4.5,
       "destaque": false
     },
     {
@@ -68,6 +72,7 @@
       "categoria": "Praia",
       "descricao": "Arquipélago com algumas das praias mais bonitas do mundo.",
       "imagem": "assets/img/noronha.jpg",
+      "avaliacao": 4.9,
       "destaque": true
     },
     {
@@ -78,6 +83,7 @@
       "categoria": "Natureza",
       "descricao": "Destino conhecido por dunas, fervedouros e cachoeiras.",
       "imagem": "assets/img/jalapao.jpg",
+      "avaliacao": 4.6,
       "destaque": false
     },
     {
@@ -88,6 +94,7 @@
       "categoria": "Natureza",
       "descricao": "Parque Nacional com trilhas, grutas, montanhas e cachoeiras.",
       "imagem": "assets/img/chapada.jpg",
+      "avaliacao": 4.8,
       "destaque": false
     },
     {
@@ -98,6 +105,7 @@
       "categoria": "História",
       "descricao": "Cidade histórica reconhecida como Patrimônio Mundial pela UNESCO.",
       "imagem": "assets/img/ouropreto.jpg",
+      "avaliacao": 4.7,
       "destaque": false
     },
     {
@@ -108,6 +116,7 @@
       "categoria": "Praia",
       "descricao": "Praia famosa por suas falésias, golfinhos e águas cristalinas.",
       "imagem": "assets/img/pipa.jpg",
+      "avaliacao": 4.6,
       "destaque": false
     },
     {
@@ -118,6 +127,7 @@
       "categoria": "Ecoturismo",
       "descricao": "Destino conhecido pelos rios de águas transparentes e mergulho.",
       "imagem": "assets/img/bonito.jpg",
+      "avaliacao": 4.9,
       "destaque": false
     },
     {
@@ -128,6 +138,7 @@
       "categoria": "Cidade",
       "descricao": "Cidade turística famosa pelo clima europeu e eventos como o Natal Luz.",
       "imagem": "assets/img/gramado.jpg",
+      "avaliacao": 4.7,
       "destaque": false
     },
     {
@@ -138,6 +149,7 @@
       "categoria": "Praia",
       "descricao": "Destino paradisíaco conhecido pelas dunas, lagoas e pôr do sol.",
       "imagem": "assets/img/jeri.jpg",
+      "avaliacao": 4.8,
       "destaque": true
     }
   ],
