@@ -8,7 +8,138 @@
       "senha": "123456",
       "admin": true,
       "favoritos": []
+    },
+    {
+      "id": "dfiA_zC7Z4Y",
+      "nome": "Icaro",
+      "email": "atleticomineiro123@gmail.com",
+      "login": "Icaro",
+      "senha": "12345",
+      "admin": false,
+      "favoritos": []
     }
   ],
-  "lugares": []
+  "lugares": [
+    {
+      "id": "1",
+      "nome": "Cristo Redentor",
+      "estado": "Rio de Janeiro",
+      "cidade": "Rio de Janeiro",
+      "categoria": "Monumento",
+      "descricao": "Um dos principais cartões-postais do Brasil e uma das sete maravilhas do mundo moderno.",
+      "imagem": "assets/img/cristo.jpg",
+      "destaque": true
+    },
+    {
+      "id": "2",
+      "nome": "Cataratas do Iguaçu",
+      "estado": "Paraná",
+      "cidade": "Foz do Iguaçu",
+      "categoria": "Natureza",
+      "descricao": "Complexo de centenas de quedas d'água localizado na fronteira entre Brasil e Argentina.",
+      "imagem": "assets/img/cataratas.jpg",
+      "destaque": true
+    },
+    {
+      "id": "3",
+      "nome": "Lençóis Maranhenses",
+      "estado": "Maranhão",
+      "cidade": "Barreirinhas",
+      "categoria": "Natureza",
+      "descricao": "Parque Nacional famoso pelas dunas de areia branca e lagoas cristalinas.",
+      "imagem": "assets/img/lencois.jpg",
+      "destaque": true
+    },
+    {
+      "id": "4",
+      "nome": "Pelourinho",
+      "estado": "Bahia",
+      "cidade": "Salvador",
+      "categoria": "História",
+      "descricao": "Centro histórico de Salvador conhecido por sua arquitetura colonial.",
+      "imagem": "assets/img/pelourinho.jpg",
+      "destaque": false
+    },
+    {
+      "id": "5",
+      "nome": "Fernando de Noronha",
+      "estado": "Pernambuco",
+      "cidade": "Fernando de Noronha",
+      "categoria": "Praia",
+      "descricao": "Arquipélago com algumas das praias mais bonitas do mundo.",
+      "imagem": "assets/img/noronha.jpg",
+      "destaque": true
+    },
+    {
+      "id": "6",
+      "nome": "Jalapão",
+      "estado": "Tocantins",
+      "cidade": "Mateiros",
+      "categoria": "Natureza",
+      "descricao": "Destino conhecido por dunas, fervedouros e cachoeiras.",
+      "imagem": "assets/img/jalapao.jpg",
+      "destaque": false
+    },
+    {
+      "id": "7",
+      "nome": "Chapada Diamantina",
+      "estado": "Bahia",
+      "cidade": "Lençóis",
+      "categoria": "Natureza",
+      "descricao": "Parque Nacional com trilhas, grutas, montanhas e cachoeiras.",
+      "imagem": "assets/img/chapada.jpg",
+      "destaque": false
+    },
+    {
+      "id": "8",
+      "nome": "Ouro Preto",
+      "estado": "Minas Gerais",
+      "cidade": "Ouro Preto",
+      "categoria": "História",
+      "descricao": "Cidade histórica reconhecida como Patrimônio Mundial pela UNESCO.",
+      "imagem": "assets/img/ouropreto.jpg",
+      "destaque": false
+    },
+    {
+      "id": "9",
+      "nome": "Praia de Pipa",
+      "estado": "Rio Grande do Norte",
+      "cidade": "Tibau do Sul",
+      "categoria": "Praia",
+      "descricao": "Praia famosa por suas falésias, golfinhos e águas cristalinas.",
+      "imagem": "assets/img/pipa.jpg",
+      "destaque": false
+    },
+    {
+      "id": "10",
+      "nome": "Bonito",
+      "estado": "Mato Grosso do Sul",
+      "cidade": "Bonito",
+      "categoria": "Ecoturismo",
+      "descricao": "Destino conhecido pelos rios de águas transparentes e mergulho.",
+      "imagem": "assets/img/bonito.jpg",
+      "destaque": false
+    },
+    {
+      "id": "11",
+      "nome": "Gramado",
+      "estado": "Rio Grande do Sul",
+      "cidade": "Gramado",
+      "categoria": "Cidade",
+      "descricao": "Cidade turística famosa pelo clima europeu e eventos como o Natal Luz.",
+      "imagem": "assets/img/gramado.jpg",
+      "destaque": false
+    },
+    {
+      "id": "12",
+      "nome": "Praia de Jericoacoara",
+      "estado": "Ceará",
+      "cidade": "Jijoca de Jericoacoara",
+      "categoria": "Praia",
+      "descricao": "Destino paradisíaco conhecido pelas dunas, lagoas e pôr do sol.",
+      "imagem": "assets/img/jeri.jpg",
+      "destaque": true
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
