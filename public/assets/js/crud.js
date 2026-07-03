@@ -3,8 +3,6 @@
     CRUD de Destinos Turísticos
 ========================================================== */
 
-const API_LUGARES = "http://localhost:3000/lugares";
-
 /* ==========================================================
     Inicialização
 ========================================================== */
@@ -60,7 +58,7 @@ async function carregarLugares() {
 
     try {
 
-        const resposta = await fetch(API_LUGARES);
+        const resposta = await fetch(API.lugares);
 
         const lugares = await resposta.json();
 
@@ -175,7 +173,7 @@ async function salvarLugar(event) {
 
         if (id === "") {
 
-            await fetch(API_LUGARES, {
+            await fetch(API.lugares, {
 
                 method: "POST",
 
@@ -195,7 +193,7 @@ async function salvarLugar(event) {
 
         else {
 
-            await fetch(`${API_LUGARES}/${id}`, {
+            await fetch(`${API.lugares}/${id}`, {
 
                 method: "PUT",
 
@@ -243,7 +241,7 @@ async function editarLugar(id) {
 
     try {
 
-        const resposta = await fetch(`${API_LUGARES}/${id}`);
+        const resposta = await fetch(`${API.lugares}/${id}`);
 
         const lugar = await resposta.json();
 
@@ -305,7 +303,7 @@ async function excluirLugar(id) {
 
     try {
 
-        await fetch(`${API_LUGARES}/${id}`, {
+        await fetch(`${API.lugares}/${id}`, {
 
             method: "DELETE"
 

@@ -154,70 +154,72 @@
 
     <section class="container mt-5">
 
-        <h2 class="mb-4">
-            Visualização
-        </h2>
+        <!-- ===================================================== -->
+        <!-- GRÁFICO -->
+        <!-- ===================================================== -->
 
-        <div id="grafico" class="border rounded p-5 text-center bg-light">
+        <section class="container mt-5">
 
-            <h4>
+            <h2 class="mb-4 text-success">
+                Visualização de Dados
+            </h2>
 
-                Área reservada para o gráfico ou mapa.
+            <div class="card shadow">
 
-            </h4>
+                <div class="card-body">
 
-            <p>
+                    <canvas id="graficoCategorias" height="120"></canvas>
 
-                Esta seção será implementada posteriormente.
+                </div>
 
-            </p>
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- ===================================================== -->
+        <!-- SOBRE O AUTOR -->
+        <!-- ===================================================== -->
 
-    <!-- ===================================================== -->
-    <!-- SOBRE O AUTOR -->
-    <!-- ===================================================== -->
+        <section class="container mt-5">
 
-    <section class="container mt-5">
+            <div class="card shadow">
 
-        <div class="card shadow">
+                <div class="card-body">
 
-            <div class="card-body">
+                    <div class="row">
 
-                <div class="row">
+                        <div class="col-md-3 text-center">
 
-                    <div class="col-md-3 text-center">
+                            <img src="assets/img/avatar.jpg" class="img-fluid rounded-circle" width="170" alt="Autor">
 
-                        <img src="assets/img/avatar.png" class="img-fluid rounded-circle" width="170" alt="Autor">
+                        </div>
 
-                    </div>
+                        <div class="col-md-9">
 
-                    <div class="col-md-9">
+                            <h3>
+                                Sobre o Autor
+                            </h3>
 
-                        <h3>
-                            Sobre o Autor
-                        </h3>
+                            <p>
 
-                        <p>
+                                Nome: Ícaro
 
-                            Nome: Ícaro
+                            </p>
 
-                        </p>
+                            <p>
 
-                        <p>
+                                Curso: Análise e Desenvolvimento de Sistemas
 
-                            Curso: Engenharia de Software
+                            </p>
 
-                        </p>
+                            <p>
 
-                        <p>
+                                Projeto desenvolvido para a disciplina
+                                de Desenvolvimento Web.
 
-                            Projeto desenvolvido para a disciplina
-                            de Desenvolvimento Web.
+                            </p>
 
-                        </p>
+                        </div>
 
                     </div>
 
@@ -225,45 +227,52 @@
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- ===================================================== -->
+        <!-- RODAPÉ -->
+        <!-- ===================================================== -->
 
-    <!-- ===================================================== -->
-    <!-- RODAPÉ -->
-    <!-- ===================================================== -->
+        <footer class="bg-success text-white mt-5">
 
-    <footer class="bg-success text-white mt-5">
+            <div class="container text-center p-4">
 
-        <div class="container text-center p-4">
+                <h5>
+                    Explore Brasil
+                </h5>
 
-            <h5>
-                Explore Brasil
-            </h5>
+                <p>
 
-            <p>
+                    Trabalho Prático 2
 
-                Trabalho Prático 2
+                </p>
 
-            </p>
+                <p>
 
-            <p>
+                    © 2026 - Todos os direitos reservados.
 
-                © 2026 - Todos os direitos reservados.
+                </p>
 
-            </p>
+            </div>
 
-        </div>
+        </footer>
 
-    </footer>
+        <script src="assets/js/login.js"></script>
 
-    <script src="assets/js/login.js"></script>
+        <script src="assets/js/navbar.js"></script>
 
-    <script src="assets/js/navbar.js"></script>
+        <script src="assets/js/app.js"></script>
 
-    <script src="assets/js/app.js"></script>
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Gráfico -->
+        <script src="assets/js/grafico.js"></script>
+
+        <script src="assets/js/api.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

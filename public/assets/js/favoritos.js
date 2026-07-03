@@ -3,9 +3,6 @@
     favoritos.js
 ==========================================================*/
 
-const API_USUARIOS = "http://localhost:3000/usuarios";
-const API_LUGARES = "http://localhost:3000/lugares";
-
 /*==========================================================
     Inicialização
 ==========================================================*/
@@ -36,7 +33,7 @@ async function carregarFavoritos() {
 
     try {
 
-        const resposta = await fetch(API_LUGARES);
+        const resposta = await fetch(API.lugares);
 
         const lugares = await resposta.json();
 

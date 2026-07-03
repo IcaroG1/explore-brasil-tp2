@@ -17,6 +17,15 @@
       "senha": "12345",
       "admin": false,
       "favoritos": []
+    },
+    {
+      "id": "LOga-QmzMZ8",
+      "nome": "Icaro1",
+      "email": "atleticomineiro1234@gmail.com",
+      "login": "admin1",
+      "senha": "123456",
+      "admin": false,
+      "favoritos": []
     }
   ],
   "lugares": [

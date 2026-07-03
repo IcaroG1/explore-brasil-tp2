@@ -3,8 +3,7 @@
     detalhes.js
 ==========================================================*/
 
-const API_LUGARES = "http://localhost:3000/lugares";
-const API_USUARIOS = "http://localhost:3000/usuarios";
+const API_USUARIOS_DETALHES = "http://localhost:3000/usuarios";
 
 /*==========================================================
     Obtém o ID da URL
@@ -31,7 +30,7 @@ async function carregarDetalhes() {
 
     try {
 
-        const resposta = await fetch(`${API_LUGARES}/${idLugar}`);
+        const resposta = await fetch(`${API.lugares}/${idLugar}`);
 
         const lugar = await resposta.json();
 
@@ -186,7 +185,7 @@ async function alternarFavorito(idLugar) {
 
         usuario.favoritos = favoritos;
 
-        await fetch(`${API_USUARIOS}/${usuario.id}`, {
+        await fetch(`${API_USUARIOS_DETALHES}/${usuario.id}`, {
 
             method: "PUT",
 
